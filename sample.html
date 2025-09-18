@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art of Effective Communication</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            color: #4a5568;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Swiper Styles */
+        .swiper {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 40px;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            color: white;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+        }
+
+        .slide-content {
+            padding: 40px;
+            max-width: 80%;
+        }
+
+        .slide-content h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .slide-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Click to Reveal Sections */
+        .reveal-section {
+            margin: 30px 0;
+        }
+
+        .reveal-trigger {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 30px;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .reveal-trigger:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .reveal-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            background: #f8f9fa;
+            border-radius: 15px;
+            margin-top: 10px;
+        }
+
+        .reveal-content.active {
+            max-height: 500px;
+        }
+
+        .reveal-inner {
+            padding: 30px;
+        }
+
+        .arrow {
+            transition: transform 0.3s ease;
+            font-size: 1.5rem;
+        }
+
+        .arrow.rotated {
+            transform: rotate(180deg);
+        }
+
+        /* Video Section */
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            background: #000;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .play-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        /* Quiz Styles */
+        .quiz-container {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 40px;
+        }
+
+        .quiz-question {
+            display: none;
+            text-align: center;
+        }
+
+        .quiz-question.active {
+            display: block;
+        }
+
+        .quiz-question h3 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+        }
+
+        .quiz-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .quiz-option {
+            background: white;
+            border: none;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .quiz-option:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .quiz-option.correct {
+            background: #48bb78;
+            color: white;
+        }
+
+        .quiz-option.incorrect {
+            background: #f56565;
+            color: white;
+        }
+
+        .quiz-nav {
+            text-align: center;
+        }
+
+        .quiz-btn {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .quiz-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .quiz-results {
+            display: none;
+            text-align: center;
+            color: white;
+        }
+
+        .quiz-results h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Interactive Elements */
+        .interactive-tip {
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .interactive-tip:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .interactive-tip h4 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .interactive-tip p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 3px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        /* Scroll Progress Indicator */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            z-index: 1000;
+        }
+
+        .scroll-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #ff9a9e 0%, #fecfef 50%, #667eea 100%);
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+
+        /* Section Progress Indicators */
+        .section-progress {
+            position: fixed;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 15px 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .section-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #e2e8f0;
+            margin: 8px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .section-dot.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transform: scale(1.3);
+            box-shadow: 0 0 15px rgba(102, 126, 234, 0.5);
+        }
+
+        .section-dot.completed {
+            background: linear-gradient(135deg, #48bb78 0%, #38ef7d 100%);
+            box-shadow: 0 0 10px rgba(72, 187, 120, 0.4);
+        }
+
+        .section-dot:hover {
+            transform: scale(1.2);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        /* Section dot tooltips */
+        .section-dot::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .section-dot:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Progress Stats */
+        .progress-stats {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 15px 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+            color: #4a5568;
+            min-width: 200px;
+            text-align: center;
+            transform: translateY(100px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .progress-stats.show {
+            transform: translateY(0);
+        }
+
+        .progress-percentage {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .section-progress {
+                right: 15px;
+                padding: 10px 8px;
+            }
+            
+            .progress-stats {
+                right: 15px;
+                bottom: 15px;
+                padding: 10px 15px;
+                min-width: 150px;
+                font-size: 0.8rem;
+            }
+            
+            .section-dot::after {
+                display: none;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .quiz-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+    </div>
+
+    <!-- Section Navigation Dots -->
+    <div class="section-progress" id="sectionProgress">
+        <div class="section-dot" data-tooltip="Introduction" data-section="hero"></div>
+        <div class="section-dot" data-tooltip="Fundamentals" data-section="fundamentals"></div>
+        <div class="section-dot" data-tooltip="Interactive Tips" data-section="tips"></div>
+        <div class="section-dot" data-tooltip="Deep Dive" data-section="deepdive"></div>
+        <div class="section-dot" data-tooltip="Video Learning" data-section="video"></div>
+        <div class="section-dot" data-tooltip="Quiz" data-section="quiz"></div>
+    </div>
+
+    <!-- Progress Stats -->
+    <div class="progress-stats" id="progressStats">
+        <div class="progress-percentage" id="progressPercentage">0%</div>
+        <div>Learning Progress</div>
+        <div id="sectionsCompleted">0/6 Sections</div>
+    </div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero animate__animated animate__fadeInDown" id="hero">
+            <h1>The Art of Effective Communication</h1>
+            <p>Master the skills that connect, inspire, and influence. Learn to communicate with clarity, confidence, and impact.</p>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+
+        <!-- Communication Fundamentals Slider -->
+        <div class="section animate__animated animate__fadeInUp" id="fundamentals">
+            <h2>📢 Communication Fundamentals</h2>
+            <div class="swiper fundamentalsSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide-content">
+                            <h3>🎯 Active Listening</h3>
+                            <p>The foundation of great communication starts with truly hearing others. Active listening involves giving full attention, asking clarifying questions, and responding thoughtfully to what others share with you.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-content">
+                            <h3>💬 Clear Expression</h3>
+                            <p>Articulate your thoughts with precision and purpose. Use simple language, organize your ideas logically, and ensure your message resonates with your audience's needs and understanding.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-content">
+                            <h3>🤝 Empathy & Connection</h3>
+                            <p>Build bridges through understanding. Put yourself in others' shoes, acknowledge their perspectives, and create an environment where everyone feels heard and valued.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-content">
+                            <h3>📱 Digital Communication</h3>
+                            <p>Navigate modern communication channels effectively. Master email etiquette, video calls, social media, and instant messaging while maintaining professionalism and clarity.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+        <!-- Interactive Tips Section -->
+        <div class="section animate__animated animate__fadeInUp" id="tips">
+            <h2>💡 Interactive Communication Tips</h2>
+            
+            <div class="interactive-tip" onclick="this.classList.toggle('animate__pulse')">
+                <h4>✨ The Power of Pause</h4>
+                <p>Take a moment before responding in difficult conversations. This pause allows you to choose your words carefully and respond rather than react emotionally.</p>
+            </div>
+
+            <div class="interactive-tip" onclick="this.classList.toggle('animate__bounce')">
+                <h4>🔄 Mirror and Match</h4>
+                <p>Subtly mirror the other person's communication style and energy level. This creates rapport and makes others feel more comfortable and understood.</p>
+            </div>
+
+            <div class="interactive-tip" onclick="this.classList.toggle('animate__tada')">
+                <h4>📊 The 7-38-55 Rule</h4>
+                <p>Only 7% of communication is words, 38% is tone of voice, and 55% is body language. Pay attention to all three elements to communicate effectively.</p>
+            </div>
+        </div>
+
+        <!-- Click to Reveal Sections -->
+        <div class="section animate__animated animate__fadeInUp" id="deepdive">
+            <h2>🔍 Deep Dive Topics</h2>
+            
+            <div class="reveal-section">
+                <button class="reveal-trigger" onclick="toggleReveal(this)">
+                    <span>Body Language Mastery</span>
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="reveal-content">
+                    <div class="reveal-inner">
+                        <h3>🎭 Reading and Using Body Language</h3>
+                        <p><strong>Key Principles:</strong></p>
+                        <ul style="margin: 15px 0; line-height: 1.8;">
+                            <li><strong>Eye Contact:</strong> Maintain 60-70% eye contact during conversations to show engagement</li>
+                            <li><strong>Open Posture:</strong> Uncrossed arms and legs signal receptiveness and confidence</li>
+                            <li><strong>Mirroring:</strong> Subtly matching others' postures builds rapport and trust</li>
+                            <li><strong>Personal Space:</strong> Respect cultural norms - typically 18 inches to 4 feet in professional settings</li>
+                        </ul>
+                        <p><strong>Practice Exercise:</strong> Stand in front of a mirror and practice different postures. Notice how confident vs. defensive postures make you feel.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal-section">
+                <button class="reveal-trigger" onclick="toggleReveal(this)">
+                    <span>Difficult Conversations</span>
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="reveal-content">
+                    <div class="reveal-inner">
+                        <h3>🗣️ Navigating Challenging Discussions</h3>
+                        <p><strong>The HEAR Method:</strong></p>
+                        <ul style="margin: 15px 0; line-height: 1.8;">
+                            <li><strong>Halt:</strong> Pause and breathe before reacting emotionally</li>
+                            <li><strong>Empathize:</strong> Try to understand the other person's perspective</li>
+                            <li><strong>Ask:</strong> Use open-ended questions to gather more information</li>
+                            <li><strong>Respond:</strong> Reply thoughtfully with "I" statements rather than "You" accusations</li>
+                        </ul>
+                        <p><strong>Example:</strong> Instead of "You never listen to me," try "I feel unheard when my ideas aren't acknowledged. Could we discuss this further?"</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal-section">
+                <button class="reveal-trigger" onclick="toggleReveal(this)">
+                    <span>Public Speaking Confidence</span>
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="reveal-content">
+                    <div class="reveal-inner">
+                        <h3>🎤 Speaking with Authority and Calm</h3>
+                        <p><strong>Pre-Speaking Preparation:</strong></p>
+                        <ul style="margin: 15px 0; line-height: 1.8;">
+                            <li><strong>Power Poses:</strong> Stand with hands on hips for 2 minutes before speaking</li>
+                            <li><strong>Breathing Technique:</strong> 4-7-8 breathing (inhale 4, hold 7, exhale 8)</li>
+                            <li><strong>Visualization:</strong> Imagine a successful, engaging presentation</li>
+                            <li><strong>Practice Out Loud:</strong> Rehearse your opening and closing lines until they're natural</li>
+                        </ul>
+                        <p><strong>During Your Speech:</strong> Focus on one friendly face at a time, speak slowly, and remember that your audience wants you to succeed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video Section -->
+        <div class="section animate__animated animate__fadeInUp" id="video">
+            <h2>🎥 Learn Through Video</h2>
+            <div class="video-container" onclick="playVideo(this)">
+                <div class="video-placeholder">
+                    <div class="play-button">▶️</div>
+                    <div>
+                        <h3>Communication in Action</h3>
+                        <p>Watch real examples of effective communication techniques</p>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 20px; color: #666; font-style: italic;">Click above to play an interactive communication scenario video</p>
+        </div>
+
+        <!-- Quiz Section -->
+        <div class="quiz-container animate__animated animate__fadeInUp" id="quiz">
+            <h2 style="color: white; text-shadow: 1px 1px 5px rgba(0,0,0,0.3);">🧠 Test Your Knowledge</h2>
+            
+            <div id="question1" class="quiz-question active">
+                <h3>Question 1: What percentage of communication is body language according to research?</h3>
+                <div class="quiz-options">
+                    <button class="quiz-option" onclick="selectAnswer(this, false)">25%</button>
+                    <button class="quiz-option" onclick="selectAnswer(this, false)">38%</button>
+                    <button class="quiz-option" onclick="selectAnswer(this, true)">55%</button>
+                    <button class="quiz-option" onclick="selectAnswer(this, false)">70%</button>
+                </div>
+            </div>
+
+            <div id="question2" class="quiz-question">
+                <h3>Question 2: What is the most effective way to show you're actively listening?</h3>
+                <div class="quiz-options">
+                    <button class="quiz-option" onclick="selectAnswer(this, false)">Nodding constantly</button>
+                    <button class="quiz-option" onclick="selectAnswer(this, true)">Asking clarifying questions</button>
+                    <button class="quiz-option" onclick="selectAnswer(this, false)">Taking notes</button>
+                    <button class="quiz-option" onclick="selectAnswer(this, false)">Staying silent</button>
+                </div>
+            </div>
+
+            <div id="question3" class="quiz-question">
+                <h3>Question 3: In difficult conversations, what should you do first?</h3>
+                <div class="quiz-options">
+                    <button class="quiz-option" onclick="selectAnswer(this, false)">State your position</button>
+                    <button class="quiz-option" onclick="selectAnswer(this, true)">Pause and breathe</button>
+                    <button class="quiz-option" onclick="selectAnswer(this, false)">Ask questions</button>
+                    <button class="quiz-option" onclick="selectAnswer(this, false)">Apologize</button>
+                </div>
+            </div>
+
+            <div id="question4" class="quiz-question">
+                <h3>Question 4: What's the ideal amount of eye contact during conversation?</h3>
+                <div class="quiz-options">
+                    <button class="quiz-option" onclick="selectAnswer(this, false)">30-40%</button>
+                    <button class="quiz-option" onclick="selectAnswer(this, false)">50-60%</button>
+                    <button class="quiz-option" onclick="selectAnswer(this, true)">60-70%</button>
+                    <button class="quiz-option" onclick="selectAnswer(this, false)">80-90%</button>
+                </div>
+            </div>
+
+            <div id="question5" class="quiz-question">
+                <h3>Question 5: Which communication style builds the most rapport?</h3>
+                <div class="quiz-options">
+                    <button class="quiz-option" onclick="selectAnswer(this, false)">Direct and assertive</button>
+                    <button class="quiz-option" onclick="selectAnswer(this, true)">Mirroring the other person</button>
+                    <button class="quiz-option" onclick="selectAnswer(this, false)">Formal and professional</button>
+                    <button class="quiz-option" onclick="selectAnswer(this, false)">Casual and friendly</button>
+                </div>
+            </div>
+
+            <div class="quiz-results">
+                <h3>🎉 Quiz Complete!</h3>
+                <p id="scoreText">Your Score: 0/5</p>
+                <p>Great job learning about effective communication!</p>
+                <button class="quiz-btn" onclick="restartQuiz()">Take Quiz Again</button>
+            </div>
+
+            <div class="quiz-nav">
+                <button class="quiz-btn" id="prevBtn" onclick="previousQuestion()" style="display: none;">Previous</button>
+                <button class="quiz-btn" id="nextBtn" onclick="nextQuestion()" style="display: none;">Next Question</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script>
+        // Progress tracking variables
+        let sectionsCompleted = new Set();
+        let totalSections = 6;
+        let isQuizCompleted = false;
+
+        // Initialize Swiper
+        const swiper = new Swiper('.fundamentalsSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            on: {
+                slideChange: function () {
+                    markSectionCompleted('fundamentals');
+                }
+            }
+        });
+
+        // Scroll progress tracking
+        function updateScrollProgress() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            
+            document.getElementById('scrollProgressBar').style.width = scrolled + '%';
+        }
+
+        // Section progress tracking
+        function updateSectionProgress() {
+            const sections = ['hero', 'fundamentals', 'tips', 'deepdive', 'video', 'quiz'];
+            const dots = document.querySelectorAll('.section-dot');
+            
+            sections.forEach((sectionId, index) => {
+                const section = document.getElementById(sectionId);
+                const rect = section.getBoundingClientRect();
+                const dot = dots[index];
+                
+                // Check if section is in viewport (at least 50% visible)
+                if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= window.innerHeight * 0.5) {
+                    dot.classList.add('active');
+                    markSectionCompleted(sectionId);
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+            
+            updateProgressStats();
+        }
+
+        // Mark section as completed
+        function markSectionCompleted(sectionId) {
+            sectionsCompleted.add(sectionId);
+            const sections = ['hero', 'fundamentals', 'tips', 'deepdive', 'video', 'quiz'];
+            const index = sections.indexOf(sectionId);
+            const dot = document.querySelectorAll('.section-dot')[index];
+            
+            if (dot) {
+                dot.classList.add('completed');
+            }
+            
+            updateProgressStats();
+        }
+
+        // Update progress statistics
+        function updateProgressStats() {
+            const completedCount = sectionsCompleted.size;
+            const percentage = Math.round((completedCount / totalSections) * 100);
+            
+            document.getElementById('progressPercentage').textContent = percentage + '%';
+            document.getElementById('sectionsCompleted').textContent = `${completedCount}/${totalSections} Sections`;
+            
+            // Show progress stats after some progress
+            if (completedCount > 0) {
+                document.getElementById('progressStats').classList.add('show');
+            }
+            
+            // Update main progress bar
+            document.getElementById('progressBar').style.width = percentage + '%';
+        }
+
+        // Navigation dots click functionality
+        document.querySelectorAll('.section-dot').forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                const sections = ['hero', 'fundamentals', 'tips', 'deepdive', 'video', 'quiz'];
+                const targetSection = document.getElementById(sections[index]);
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Scroll event listeners
+        window.addEventListener('scroll', () => {
+            updateScrollProgress();
+            updateSectionProgress();
+        });
+
+        // Toggle reveal sections
+        function toggleReveal(button) {
+            const content = button.nextElementSibling;
+            const arrow = button.querySelector('.arrow');
+            
+            content.classList.toggle('active');
+            arrow.classList.toggle('rotated');
+            
+            // Mark deep dive section as interacted with
+            markSectionCompleted('deepdive');
+            
+            // Animate button
+            button.classList.add('animate__pulse');
+            setTimeout(() => button.classList.remove('animate__pulse'), 600);
+        }
+
+        // Enhanced interactive tips
+        document.querySelectorAll('.interactive-tip').forEach(tip => {
+            tip.addEventListener('click', () => {
+                markSectionCompleted('tips');
+            });
+        });
+
+        // Video player simulation
+        function playVideo(container) {
+            const placeholder = container.querySelector('.video-placeholder');
+            placeholder.innerHTML = `
+                <div style="text-align: center;">
+                    <h3>🎬 Video Playing...</h3>
+                    <p>This would be your communication training video</p>
+                    <button onclick="location.reload()" style="background: white; color: #667eea; border: none; padding: 10px 20px; border-radius: 20px; margin-top: 20px; cursor: pointer;">Reload to Reset</button>
+                </div>
+            `;
+            placeholder.style.background = 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)';
+            container.classList.add('animate__pulse');
+            
+            // Mark video section as completed
+            markSectionCompleted('video');
+        }
+
+        // Quiz functionality
+        let currentQuestion = 1;
+        let score = 0;
+        let answersSelected = [];
+
+        function selectAnswer(button, isCorrect) {
+            const options = button.parentElement.querySelectorAll('.quiz-option');
+            
+            // Remove previous selections
+            options.forEach(opt => {
+                opt.classList.remove('correct', 'incorrect');
+                opt.style.pointerEvents = 'none';
+            });
+            
+            // Show correct answer
+            if (isCorrect) {
+                button.classList.add('correct');
+                score++;
+            } else {
+                button.classList.add('incorrect');
+                // Highlight correct answer
+                options.forEach(opt => {
+                    if (opt.onclick.toString().includes('true')) {
+                        opt.classList.add('correct');
+                    }
+                });
+            }
+            
+            answersSelected[currentQuestion - 1] = true;
+            
+            // Show next button
+            setTimeout(() => {
+                document.getElementById('nextBtn').style.display = 'inline-block';
+                updateQuizProgress();
+            }, 1000);
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < 5) {
+                document.getElementById(`question${currentQuestion}`).classList.remove('active');
+                currentQuestion++;
+                document.getElementById(`question${currentQuestion}`).classList.add('active');
+                
+                document.getElementById('nextBtn').style.display = 'none';
+                document.getElementById('prevBtn').style.display = 'inline-block';
+                
+                // Re-enable options for current question
+                const options = document.querySelectorAll(`#question${currentQuestion} .quiz-option`);
+                options.forEach(opt => opt.style.pointerEvents = 'auto');
+            } else {
+                showResults();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestion > 1) {
+                document.getElementById(`question${currentQuestion}`).classList.remove('active');
+                currentQuestion--;
+                document.getElementById(`question${currentQuestion}`).classList.add('active');
+                
+                if (currentQuestion === 1) {
+                    document.getElementById('prevBtn').style.display = 'none';
+                }
+                
+                if (answersSelected[currentQuestion - 1]) {
+                    document.getElementById('nextBtn').style.display = 'inline-block';
+                }
+            }
+        }
+
+        function showResults() {
+            document.getElementById(`question${currentQuestion}`).classList.remove('active');
+            document.querySelector('.quiz-results').style.display = 'block';
+            document.querySelector('.quiz-nav').style.display = 'none';
+            
+            document.getElementById('scoreText').textContent = `Your Score: ${score}/5`;
+            isQuizCompleted = true;
+            markSectionCompleted('quiz');
+            updateQuizProgress();
+            
+            // Celebrate with animation
+            document.querySelector('.quiz-results').classList.add('animate__bounceIn');
+        }
+
+        function restartQuiz() {
+            currentQuestion = 1;
+            score = 0;
+            answersSelected = [];
+            isQuizCompleted = false;
+            
+            document.querySelector('.quiz-results').style.display = 'none';
+            document.querySelector('.quiz-nav').style.display = 'block';
+            document.getElementById('question1').classList.add('active');
+            document.getElementById('nextBtn').style.display = 'none';
+            document.getElementById('prevBtn').style.display = 'none';
+            
+            // Reset all options
+            const allOptions = document.querySelectorAll('.quiz-option');
+            allOptions.forEach(opt => {
+                opt.classList.remove('correct', 'incorrect');
+                opt.style.pointerEvents = 'auto';
+            });
+            
+            updateQuizProgress();
+        }
+
+        function updateQuizProgress() {
+            const progress = isQuizCompleted ? 100 : (currentQuestion / 5) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__fadeInUp');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Initialize progress tracking
+        document.addEventListener('DOMContentLoaded', () => {
+            updateSectionProgress();
+            updateScrollProgress();
+            updateQuizProgress();
+            
+            // Mark hero section as completed initially
+            setTimeout(() => {
+                markSectionCompleted('hero');
+            }, 1000);
+        });
+
+        // Initialize progress bar
+        updateQuizProgress();
+    </script>
+</body>
+</html>
