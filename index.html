@@ -1,567 +1,763 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Art of Effective Communication</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./styles.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
 
-<body>
+  <body>
     <div class="main-wrapper">
-  
-        <div class="navigate">
-            <a href="#title-section" class="sections-link"> <span>🏡</span>Home</a>
-            <a href="#intro-video" class="sections-link"><span>📽️</span>Topic Video</a>
-            <a href="#slider-section" class="sections-link"><span>🕮</span>Notes</a>
-            <a href="#detailedConcepts" class="sections-link" style="padding: 1px 4px;"><span>✍🏻</span>Interactive Concepts & practice</a>
-        </div>
-        <!-- scroll progress bar -->
-        <div class="progress-box">
-            <div class="progress-bar" id="progressBar"></div>
-        </div>
+      <div class="navigate">
+        <a href="#title-section" class="sections-link"> <span><i class="fa-solid fa-house" style="color: #ffffff;"></i></span>Home</a>
+        <a href="#intro-video" class="sections-link"
+          ><span><i class="fa-solid fa-video" style="color: #ffffff;"></i></span>Topic Video</a
+        >
+        <a href="#slider-section" class="sections-link"><span><i class="fa-solid fa-book" style="color: #ffffff;"></i></span>Notes</a>
+        <a
+          href="#detailedConcepts"
+          class="sections-link"
+          style="padding: 1px 4px"
+          ><span><i class="fa-solid fa-person-chalkboard" style="color: #ffffff;"></i></span>Interactive Concepts & practice</a
+        >
+      </div>
+      <!-- scroll progress bar -->
+      <div class="progress-box">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
 
-        <!-- title section -->
-        <section id="title-section">
-            <div class="content">
-                <div class=" title-section element-center animate__animated animate__fadeInDown">
-                    <div class="header-img-box">
-                        <img src="./assets/header-img.jpg" alt="header-img" class="responsive-img header-img">
-                    </div>
-                    <h1 class="title ">The Art of Effective Communication</h1>
-                    <p class="sub-title">Effective communication is about more than just exchanging information.</p>
-                </div>
+      <!-- title section -->
+      <section id="title-section">
+        <div class="content">
+          <div
+            class="title-section element-center animate__animated animate__fadeInDown"
+          >
+            <div class="header-img-box">
+              <img
+                src="./assets/header-img.jpg"
+                alt="header-img"
+                class="responsive-img header-img"
+              />
             </div>
-        </section>
+            <h1 class="title">The Art of Effective Communication</h1>
+            <p class="sub-title">
+              Effective communication is about more than just exchanging
+              information.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <!-- intro video -->
-        <section id="intro-video" class="intro-video">
-            <div class="content">
+      <!-- intro video -->
+      <section id="intro-video" class="intro-video">
+        <div class="content">
+          <div class="wrapper">
+            <div class="section-head">
+              <h3>What is Effective communication ?</h3>
+              <p>Let's understand it with a interactive video</p>
+            </div>
+
+            <div class="video-wrapper">
+              <video
+                height="700"
+                controls
+                src="./assets/Effective-Communication.mp4"
+              ></video>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- slider section -->
+      <section
+        id="slider-section"
+        class="slider-section animate__animated animate__fadeInUp"
+      >
+        <div class="pause-btn-layer">
+          <button class="pause-btn" id="pauseSwiper">
+            <span class="play"><i class="fa-solid fa-play" style="color: #ffffff;"></i></span> <span class="pause"><i class="fa-solid fa-pause" style="color: #ffffff;"></i></span>
+          </button>
+        </div>
+        <div class="content">
+          <div class="section-head">
+            <h3>Fundamentals of communication</h3>
+          </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" data-slide-id="s-1">
+                <div class="slider-content element-center">
+                  <div class="img-box">
+                    <img
+                      src="./assets/slider-img-4.png"
+                      alt="slider-img-1"
+                      height="90"
+                      width="120"
+                      class="responsive"
+                    />
+                  </div>
+                  <div class="text-box">
+                    <h3 class="slider-head">Lorem Ipsum</h3>
+                    <p class="slider-para">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Ducimus dicta est fugit earum neque repudiandae
+                      laboriosam, laudantium voluptas, cupiditate ad commodi?
+                      Sint illo at iusto architecto dolorem et animi natus,
+                      quisquam quas doloribus saepe rerum totam consectetur
+                      obcaecati, eveniet dignissimos culpa alias cumque? Id
+                      ullam at unde nesciunt corrupti velit ducimus quisquam
+                      cumque eos deleniti perferendis fuga, accusantium
+                      recusandae eius.
+                    </p>
+
+                    <button class="theme-btn" onclick="openPopup('s-1')">
+                      Read more..
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" data-slide-id="s-2">
+                <div class="slider-content element-center">
+                  <div class="img-box">
+                    <img
+                      src="./assets/slider-img-1.jpg"
+                      alt="slider-img-1"
+                      height="90"
+                      width="120"
+                      class="responsive"
+                    />
+                  </div>
+                  <div class="text-box">
+                    <h3 class="slider-head">Lorem Ipsum</h3>
+                    <p class="slider-para">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Ducimus dicta est fugit earum neque repudiandae
+                      laboriosam, laudantium voluptas, cupiditate ad commodi?
+                      Sint illo at iusto architecto dolorem et animi natus,
+                      quisquam quas doloribus saepe rerum totam consectetur
+                      obcaecati, eveniet dignissimos culpa alias cumque? Id
+                      ullam at unde nesciunt corrupti velit ducimus quisquam
+                      cumque eos deleniti perferendis fuga, accusantium
+                      recusandae eius.
+                    </p>
+
+                    <button onclick="openPopup('s-2')" class="theme-btn">
+                      Read more..
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" data-slide-id="s-3">
+                <div class="slider-content element-center">
+                  <div class="img-box">
+                    <img
+                      src="./assets/slider-img-2.jpg"
+                      alt="slider-img-1"
+                      height="90"
+                      width="120"
+                      class="responsive"
+                    />
+                  </div>
+                  <div class="text-box">
+                    <h3 class="slider-head">Lorem Ipsum</h3>
+                    <p class="slider-para">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Ducimus dicta est fugit earum neque repudiandae
+                      laboriosam, laudantium voluptas, cupiditate ad commodi?
+                      Sint illo at iusto architecto dolorem et animi natus,
+                      quisquam quas doloribus saepe rerum totam consectetur
+                      obcaecati, eveniet dignissimos culpa alias cumque? Id
+                      ullam at unde nesciunt corrupti velit ducimus quisquam
+                      cumque eos deleniti perferendis fuga, accusantium
+                      recusandae eius.
+                    </p>
+
+                    <button onclick="openPopup('s-3')" class="theme-btn">
+                      Read more..
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" data-slide-id="s-4">
+                <div class="slider-content element-center">
+                  <div class="img-box">
+                    <img
+                      src="./assets/slider-img-3.jpg"
+                      alt="slider-img-1"
+                      height="90"
+                      width="120"
+                      class="responsive"
+                    />
+                  </div>
+                  <div class="text-box">
+                    <h3 class="slider-head">Lorem Ipsum</h3>
+                    <p class="slider-para">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Ducimus dicta est fugit earum neque repudiandae
+                      laboriosam, laudantium voluptas, cupiditate ad commodi?
+                      Sint illo at iusto architecto dolorem et animi natus,
+                      quisquam quas doloribus saepe rerum totam consectetur
+                      obcaecati, eveniet dignissimos culpa alias cumque? Id
+                      ullam at unde nesciunt corrupti velit ducimus quisquam
+                      cumque eos deleniti perferendis fuga, accusantium
+                      recusandae eius.
+                    </p>
+
+                    <button onclick="openPopup('s-4')" class="theme-btn">
+                      Read more..
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" data-slide-id="s-5">
+                <div class="slider-content element-center">
+                  <div class="img-box">
+                    <img
+                      src="./assets/slider-img-4.png"
+                      alt="slider-img-1"
+                      height="90"
+                      width="120"
+                      class="responsive"
+                    />
+                  </div>
+                  <div class="text-box">
+                    <h3 class="slider-head">Lorem Ipsum</h3>
+                    <p class="slider-para">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Ducimus dicta est fugit earum neque repudiandae
+                      laboriosam, laudantium voluptas, cupiditate ad commodi?
+                      Sint illo at iusto architecto dolorem et animi natus,
+                      quisquam quas doloribus saepe rerum totam consectetur
+                      obcaecati, eveniet dignissimos culpa alias cumque? Id
+                      ullam at unde nesciunt corrupti velit ducimus quisquam
+                      cumque eos deleniti perferendis fuga, accusantium
+                      recusandae eius.
+                    </p>
+
+                    <button onclick="openPopup('s-5')" class="theme-btn">
+                      Read more..
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <div class="popup-cover element-center" id="popupCover">
+          <div class="popup-content element-center">
+            <button class="close-btn" onclick="closePopup()">&times;</button>
+            <h3 class="popup-content-head" id="popupHead"></h3>
+            <p class="popup-content-para" id="popupPara"></p>
+            <div class="popup-body">
+              <ul id="popupList" class="popup-list">
+                <li>Hello</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- detailed concepts section -->
+      <section
+        id="detailedConcepts"
+        class="detailed-concepts animate__animated animate__fadeInUp"
+      >
+
+      <div class="section-head">
+        <h3>Interactive Concepts & practice</h3>
+      </div>
+        <div class="content">
+          <div class="show-more-wrapper">
+            <div class="show-more-box">
+              <button class="show-more-btn" onclick="revealSection(this)">
+                <span class="show-more-head"
+                  >Read theory <i class="fa-solid fa-pen-nib" style="color: #ffffff;"></i>
+                  <span class="sub-head"
+                    >(Lorem Lorem ipsum dolor sit amet consectetur adipisicing
+                    )</span
+                  >
+                </span>
+                <span class="down-arrow"><i class="fa-solid fa-chevron-down" style="color: #000000;"></i></span>
+              </button>
+
+              <div class="show-more-content">
                 <div class="wrapper">
-                    <div class="section-head">
-                        <h3>What is Effective communication ?</h3>
-                        <p>Let's understand it with a interactive video</p>
-                    </div>
+                  <h3>
+                    Verbal vs. Nonverbal Communication: What’s the Difference?
+                  </h3>
+                  <p>
+                    While nonverbal communication involves body language, verbal
+                    communication relies on words. There’s more to it than that,
+                    however. Proper communication often requires a mix of verbal
+                    and nonverbal signals to convey meaning. Consider the
+                    differences between these forms of communication and how to
+                    use them: <br />
 
-                    <div class="video-wrapper">
-                        <video height="700" controls src="./assets/Effective-Communication.mp4"></video>
-                    </div>
+                    <b>1. Delivery:</b> Verbal communication can transpire over
+                    the phone, through email, written letters, or a face-to-face
+                    conversation. Most nonverbal communication happens only when
+                    the two or more parties can see each other. <br />
+                    <b>2. Intentionality:</b> A difference between the two types
+                    of communication, verbal and nonverbal, is that the words a
+                    person chooses—verbal—tend to be intentional, whereas many
+                    elements of nonverbal communication can be unintentional or
+                    out of a person’s control and impact reception. Nonverbal
+                    communication can be unconscious; for example, a person who
+                    sweats while talking may convey nervousness.. <br />
+                    <b>3. Grammar:</b> Verbal speech has patterns and grammar
+                    rules to adhere to, whereas nonverbal communication is more
+                    fluid. <br />
+                    <b>4. Authenticity:</b> Nonverbal behavior like body
+                    movements, mannerisms, or physiological responses (blinking
+                    or fidgeting) can influence communication, altering the
+                    authenticity of your spoken words or causing them to take on
+                    a different meaning. Nonverbal messages can be more powerful
+                    than verbal communication, as human bodies can
+                    subconsciously deliver messages that they are verbally not
+                    conveying—“actions speak louder than words.” <br />
+                    <b>5. Emotions:</b> Nonverbal cues are especially powerful
+                    when communicating with children. A parent’s facial
+                    expressions and tone will often express feelings more
+                    clearly than using words kids may be too young to understand
+                    fully. Nonverbal communication is also beneficial when
+                    communicating emotions between a language barrier. <br />
+                    <b>6. Engagement:</b> Nonverbal signals are a great way to
+                    communicate attentiveness and engagement to those around
+                    you. It’s not enough to verbally tell someone you are
+                    interested in what they’re saying, controlling your posture
+                    and eye contact will demonstrate to others that you are
+                    interested, whereas looking around or at your phone can
+                    express disinterest, even if that’s not technically the
+                    case. Want to Learn More About Busines
+                  </p>
                 </div>
+              </div>
             </div>
 
+            <div class="show-more-box">
+              <button class="show-more-btn" onclick="revealSection(this)">
+                <span class="show-more-head"
+                  >Watch Video <i class="fa-solid fa-video" style="color: #ffffff;"></i><span class="sub-head"
+                    >(Lorem Lorem ipsum dolor sit amet consectetur adipisicing
+                    )</span
+                  >
+                </span>
+                <span class="down-arrow"><i class="fa-solid fa-chevron-down" style="color: #000000;"></i></span>
+              </button>
 
-        </section>
+              <div class="show-more-content">
+                <div class="wrapper">
+                  <h3>Watch this interactive video clip</h3>
 
-        <!-- slider section -->
-        <section id="slider-section" class="slider-section  animate__animated animate__fadeInUp">
-            <div class="pause-btn-layer">
-                <button class="pause-btn" id="pauseSwiper"><span class="play">▶</span> <span
-                        class="pause">❚❚</span></button>
-            </div>
-            <div class="content">
-
-                <div class="section-head">
-                    <h3>Fundamentals of communication</h3>
+                  <div class="video-box">
+                    <video
+                      height="700"
+                      controls
+                      src="./assets/A-guide-to-effective-communcation.mp4"
+                    ></video>
+                  </div>
                 </div>
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide" data-slide-id="s-1">
-                            <div class="slider-content element-center">
-                                <div class="img-box"><img src="./assets/slider-img-4.png" alt="slider-img-1" height="90"
-                                        width="120" class="responsive"></div>
-                                <div class="text-box">
-                                    <h3 class="slider-head">Lorem Ipsum</h3>
-                                    <p class="slider-para">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                        Ducimus dicta est fugit earum neque repudiandae laboriosam, laudantium voluptas,
-                                        cupiditate ad commodi? Sint illo at iusto architecto dolorem et animi natus,
-                                        quisquam quas doloribus saepe rerum totam consectetur obcaecati, eveniet
-                                        dignissimos culpa alias cumque? Id ullam at unde nesciunt corrupti velit ducimus
-                                        quisquam cumque eos deleniti perferendis fuga, accusantium recusandae eius.</p>
-
-                                    <button class="theme-btn" onclick="openPopup('s-1')">Read more..</button>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="swiper-slide" data-slide-id="s-2">
-                            <div class="slider-content element-center">
-                                <div class="img-box"><img src="./assets/slider-img-1.jpg" alt="slider-img-1" height="90"
-                                        width="120" class="responsive"></div>
-                                <div class="text-box">
-                                    <h3 class="slider-head">Lorem Ipsum</h3>
-                                    <p class="slider-para">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                        Ducimus dicta est fugit earum neque repudiandae laboriosam, laudantium voluptas,
-                                        cupiditate ad commodi? Sint illo at iusto architecto dolorem et animi natus,
-                                        quisquam quas doloribus saepe rerum totam consectetur obcaecati, eveniet
-                                        dignissimos culpa alias cumque? Id ullam at unde nesciunt corrupti velit ducimus
-                                        quisquam cumque eos deleniti perferendis fuga, accusantium recusandae eius.</p>
-
-                                    <button onclick="openPopup('s-2')" class="theme-btn">Read more..</button>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="swiper-slide" data-slide-id="s-3">
-                            <div class="slider-content element-center">
-                                <div class="img-box"><img src="./assets/slider-img-2.jpg" alt="slider-img-1" height="90"
-                                        width="120" class="responsive"></div>
-                                <div class="text-box">
-                                    <h3 class="slider-head">Lorem Ipsum</h3>
-                                    <p class="slider-para">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                        Ducimus dicta est fugit earum neque repudiandae laboriosam, laudantium voluptas,
-                                        cupiditate ad commodi? Sint illo at iusto architecto dolorem et animi natus,
-                                        quisquam quas doloribus saepe rerum totam consectetur obcaecati, eveniet
-                                        dignissimos culpa alias cumque? Id ullam at unde nesciunt corrupti velit ducimus
-                                        quisquam cumque eos deleniti perferendis fuga, accusantium recusandae eius.</p>
-
-                                    <button onclick="openPopup('s-3')" class="theme-btn">Read more..</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" data-slide-id="s-4">
-                            <div class="slider-content element-center">
-                                <div class="img-box"><img src="./assets/slider-img-3.jpg" alt="slider-img-1" height="90"
-                                        width="120" class="responsive"></div>
-                                <div class="text-box">
-                                    <h3 class="slider-head">Lorem Ipsum</h3>
-                                    <p class="slider-para">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                        Ducimus dicta est fugit earum neque repudiandae laboriosam, laudantium voluptas,
-                                        cupiditate ad commodi? Sint illo at iusto architecto dolorem et animi natus,
-                                        quisquam quas doloribus saepe rerum totam consectetur obcaecati, eveniet
-                                        dignissimos culpa alias cumque? Id ullam at unde nesciunt corrupti velit ducimus
-                                        quisquam cumque eos deleniti perferendis fuga, accusantium recusandae eius.</p>
-
-                                    <button onclick="openPopup('s-4')" class="theme-btn">Read more..</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" data-slide-id="s-5">
-                            <div class="slider-content element-center">
-                                <div class="img-box"><img src="./assets/slider-img-4.png" alt="slider-img-1" height="90"
-                                        width="120" class="responsive"></div>
-                                <div class="text-box">
-                                    <h3 class="slider-head">Lorem Ipsum</h3>
-                                    <p class="slider-para">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                        Ducimus dicta est fugit earum neque repudiandae laboriosam, laudantium voluptas,
-                                        cupiditate ad commodi? Sint illo at iusto architecto dolorem et animi natus,
-                                        quisquam quas doloribus saepe rerum totam consectetur obcaecati, eveniet
-                                        dignissimos culpa alias cumque? Id ullam at unde nesciunt corrupti velit ducimus
-                                        quisquam cumque eos deleniti perferendis fuga, accusantium recusandae eius.</p>
-
-                                    <button onclick="openPopup('s-5')" class="theme-btn">Read more..</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-
+              </div>
             </div>
+            <div class="show-more-box">
+              <button class="show-more-btn" onclick="revealSection(this)">
+                <span class="show-more-head"
+                  >Test Your Knowledge <i class="fa-solid fa-brain" style="color: #ffffff;"></i><span class="sub-head"
+                    >(Lorem Lorem ipsum dolor sit amet consectetur adipisicing
+                    )</span
+                  >
+                </span>
+                <span class="down-arrow"><i class="fa-solid fa-chevron-down" style="color: #000000;"></i></span>
+              </button>
 
-            <div class="popup-cover element-center" id="popupCover">
-                <div class="popup-content element-center">
-                    <button class="close-btn" onclick="closePopup()">&times;</button>
-                    <h3 class="popup-content-head" id="popupHead"></h3>
-                    <p class="popup-content-para" id="popupPara"></p>
-                    <div class="popup-body">
-                        <ul id="popupList" class="popup-list">
-                            <li>Hello</li>
+              <div class="show-more-content">
+                <div class="wrapper">
+                  <h3>Let's see how much you remembered ?</h3>
+
+                  <div class="question-answer-wrapper">
+                    <div class="question-answer-box">
+                      <div class="questions-box element-center">
+                        <p class="question">
+                          1. Which of these do not deal with precise
+                          information?
+                        </p>
+                        <ul class="options">
+                          <li>Engineer</li>
+                          <li>Scientist</li>
+                          <li>Technician</li>
+                          <li>Fiction writer</li>
                         </ul>
+                        <button class="answer-btn theme-btn">
+                          Show Answer
+                        </button>
+                        <span
+                          style="
+                            font-size: 10px;
+                            font-weight: bold;
+                            color: #000;
+                          "
+                          >hover to see answer and explanation</span
+                        >
+
+                        <!-- answer-box -->
+                        <div class="answer-box element-center">
+                          <p><b>Answer:</b> d</p>
+                          <p>
+                            <b>Explanation:</b> A scientist, engineer,
+                            technician or technologist deals with precise
+                            information. A fiction writer may indulge in
+                            charming nonsense, but a scientific man must develop
+                            a style of writing which conveys information with
+                            precision.
+                          </p>
+                        </div>
+                      </div>
                     </div>
 
+                    <div class="question-answer-box">
+                      <div class="questions-box element-center">
+                        <p class="question">
+                          1. Which of these do not deal with precise
+                          information?
+                        </p>
+                        <ul class="options">
+                          <li>Engineer</li>
+                          <li>Scientist</li>
+                          <li>Technician</li>
+                          <li>Fiction writer</li>
+                        </ul>
+                        <button class="answer-btn theme-btn">
+                          Show Answer
+                        </button>
+                        <span
+                          style="
+                            font-size: 10px;
+                            font-weight: bold;
+                            color: #000;
+                          "
+                          >hover to see answer and explanation</span
+                        >
 
+                        <!-- answer-box -->
+                        <div class="answer-box element-center">
+                          <p><b>Answer:</b> d</p>
+                          <p>
+                            <b>Explanation:</b> A scientist, engineer,
+                            technician or technologist deals with precise
+                            information. A fiction writer may indulge in
+                            charming nonsense, but a scientific man must develop
+                            a style of writing which conveys information with
+                            precision.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="question-answer-box">
+                      <div class="questions-box element-center">
+                        <p class="question">
+                          1. Which of these do not deal with precise
+                          information?
+                        </p>
+                        <ul class="options">
+                          <li>Engineer</li>
+                          <li>Scientist</li>
+                          <li>Technician</li>
+                          <li>Fiction writer</li>
+                        </ul>
+                        <button class="answer-btn theme-btn">
+                          Show Answer
+                        </button>
+                        <span
+                          style="
+                            font-size: 10px;
+                            font-weight: bold;
+                            color: #000;
+                          "
+                          >hover to see answer and explanation</span
+                        >
+
+                        <!-- answer-box -->
+                        <div class="answer-box element-center">
+                          <p><b>Answer:</b> d</p>
+                          <p>
+                            <b>Explanation:</b> A scientist, engineer,
+                            technician or technologist deals with precise
+                            information. A fiction writer may indulge in
+                            charming nonsense, but a scientific man must develop
+                            a style of writing which conveys information with
+                            precision.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="question-answer-box">
+                      <div class="questions-box element-center">
+                        <p class="question">
+                          1. Which of these do not deal with precise
+                          information?
+                        </p>
+                        <ul class="options">
+                          <li>Engineer</li>
+                          <li>Scientist</li>
+                          <li>Technician</li>
+                          <li>Fiction writer</li>
+                        </ul>
+                        <button class="answer-btn theme-btn">
+                          Show Answer
+                        </button>
+                        <span
+                          style="
+                            font-size: 10px;
+                            font-weight: bold;
+                            color: #000;
+                          "
+                          >hover to see answer and explanation</span
+                        >
+
+                        <!-- answer-box -->
+                        <div class="answer-box element-center">
+                          <p><b>Answer:</b> d</p>
+                          <p>
+                            <b>Explanation:</b> A scientist, engineer,
+                            technician or technologist deals with precise
+                            information. A fiction writer may indulge in
+                            charming nonsense, but a scientific man must develop
+                            a style of writing which conveys information with
+                            precision.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="question-answer-box">
+                      <div class="questions-box element-center">
+                        <p class="question">
+                          1. Which of these do not deal with precise
+                          information?
+                        </p>
+                        <ul class="options">
+                          <li>Engineer</li>
+                          <li>Scientist</li>
+                          <li>Technician</li>
+                          <li>Fiction writer</li>
+                        </ul>
+                        <button class="answer-btn theme-btn">
+                          Show Answer
+                        </button>
+                        <span
+                          style="
+                            font-size: 10px;
+                            font-weight: bold;
+                            color: #000;
+                          "
+                          >hover to see answer and explanation</span
+                        >
+
+                        <!-- answer-box -->
+                        <div class="answer-box element-center">
+                          <p><b>Answer:</b> d</p>
+                          <p>
+                            <b>Explanation:</b> A scientist, engineer,
+                            technician or technologist deals with precise
+                            information. A fiction writer may indulge in
+                            charming nonsense, but a scientific man must develop
+                            a style of writing which conveys information with
+                            precision.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="question-answer-box">
+                      <div class="questions-box element-center">
+                        <p class="question">
+                          1. Which of these do not deal with precise
+                          information?
+                        </p>
+                        <ul class="options">
+                          <li>Engineer</li>
+                          <li>Scientist</li>
+                          <li>Technician</li>
+                          <li>Fiction writer</li>
+                        </ul>
+                        <button class="answer-btn theme-btn">
+                          Show Answer
+                        </button>
+                        <span
+                          style="
+                            font-size: 10px;
+                            font-weight: bold;
+                            color: #000;
+                          "
+                          >hover to see answer and explanation</span
+                        >
+
+                        <!-- answer-box -->
+                        <div class="answer-box element-center">
+                          <p><b>Answer:</b> d</p>
+                          <p>
+                            <b>Explanation:</b> A scientist, engineer,
+                            technician or technologist deals with precise
+                            information. A fiction writer may indulge in
+                            charming nonsense, but a scientific man must develop
+                            a style of writing which conveys information with
+                            precision.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+            <div class="show-more-box">
+              <button class="show-more-btn" onclick="revealSection(this)">
+                <span class="show-more-head"
+                  >Listen Audios <i class="fa-solid fa-headphones" style="color: #ffffff;"></i><span class="sub-head"
+                    >(Lorem Lorem ipsum dolor sit amet consectetur adipisicing
+                    )</span
+                  >
+                </span>
+                <span class="down-arrow"><i class="fa-solid fa-chevron-down" style="color: #000000;"></i></span>
+              </button>
 
-        </section>
+              <div class="show-more-content">
+                <div class="wrapper">
+                  <h3>Listen to audios to improve your communication skills</h3>
+                  <div class="audio-box">
+                    <audio
+                      class="audio"
+                      controls
+                      preload="auto"
+                      src="./assets/audio.m4a"
+                    ></audio>
 
-        <!-- detailed concepts section -->
-        <section id="detailedConcepts" class="detailed-concepts animate__animated animate__fadeInUp">
-            <div class="content">
+                    <audio
+                      class="audio"
+                      controls
+                      preload="auto"
+                      src="./assets/audio.m4a"
+                    ></audio>
 
-                <div class="show-more-wrapper">
-                    <div class="show-more-box">
-                        <button class="show-more-btn" onclick="revealSection(this)">
-                            <span class="show-more-head">Read theory ✒️ <span class="sub-head">(Lorem Lorem ipsum dolor
-                                    sit
-                                    amet consectetur adipisicing )</span> </span>
-                            <span class="down-arrow">⏷</span>
-                        </button>
+                 
 
-                        <div class="show-more-content">
-                            <div class="wrapper">
-                                <h3> Verbal vs. Nonverbal Communication: What’s the Difference?</h3>
-                                <p>While nonverbal communication involves body language, verbal communication relies on
-                                    words. There’s more to it than that, however. Proper communication often requires a
-                                    mix of verbal and nonverbal signals to convey meaning. Consider the differences
-                                    between these forms of communication and how to use them: <br>
+                    <audio
+                      class="audio"
+                      controls
+                      preload="auto"
+                      src="./assets/audio.m4a"
+                    ></audio>
 
-                                    <b>1. Delivery:</b> Verbal communication can transpire over the phone, through
-                                    email,
-                                    written letters, or a face-to-face conversation. Most nonverbal communication
-                                    happens only when the two or more parties can see each other. <br>
-                                    <b>2. Intentionality:</b> A difference between the two types of communication,
-                                    verbal and
-                                    nonverbal, is that the words a person chooses—verbal—tend to be intentional, whereas
-                                    many elements of nonverbal communication can be unintentional or out of a person’s
-                                    control and impact reception. Nonverbal communication can be unconscious; for
-                                    example, a person who sweats while talking may convey nervousness.. <br>
-                                    <b>3. Grammar:</b> Verbal speech has patterns and grammar rules to adhere to,
-                                    whereas nonverbal
-                                    communication is more fluid. <br>
-                                    <b>4. Authenticity:</b> Nonverbal behavior like body movements, mannerisms, or
-                                    physiological
-                                    responses (blinking or fidgeting) can influence communication, altering the
-                                    authenticity
-                                    of your spoken words or causing them to take on a different meaning. Nonverbal
-                                    messages
-                                    can be more powerful than verbal communication, as human bodies can subconsciously
-                                    deliver messages that they are verbally not conveying—“actions speak louder than
-                                    words.” <br>
-                                    <b>5. Emotions:</b> Nonverbal cues are especially powerful when communicating with
-                                    children. A
-                                    parent’s facial expressions and tone will often express feelings more clearly than
-                                    using
-                                    words kids may be too young to understand fully. Nonverbal communication is also
-                                    beneficial when communicating emotions between a language barrier. <br>
-                                    <b>6. Engagement:</b> Nonverbal signals are a great way to communicate attentiveness
-                                    and
-                                    engagement to those around you. It’s not enough to verbally tell someone you are
-                                    interested in what they’re saying, controlling your posture and eye contact will
-                                    demonstrate to others that you are interested, whereas looking around or at your
-                                    phone
-                                    can express disinterest, even if that’s not technically the case.
-                                    Want to Learn More About Busines
-                                </p>
+                    <audio
+                      class="audio"
+                      controls
+                      preload="auto"
+                      src="./assets/audio.m4a"
+                    ></audio>
 
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="show-more-box">
-                        <button class="show-more-btn" onclick="revealSection(this)">
-                            <span class="show-more-head">Watch Video ▶️<span class="sub-head">(Lorem Lorem ipsum dolor
-                                    sit
-                                    amet consectetur adipisicing )</span> </span>
-                            <span class="down-arrow">⏷</span>
-                        </button>
-
-                        <div class="show-more-content">
-                            <div class="wrapper">
-                                <h3>Watch this interactive video clip</h3>
-
-                                <div class="video-box">
-                                    <video height="700" controls
-                                        src="./assets/A-guide-to-effective-communcation.mp4"></video>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="show-more-box">
-                        <button class="show-more-btn" onclick="revealSection(this)">
-                            <span class="show-more-head">Test Your Knowledge 🧠<span class="sub-head">(Lorem Lorem ipsum
-                                    dolor sit amet
-                                    consectetur adipisicing )</span> </span>
-                            <span class="down-arrow">⏷</span>
-                        </button>
-
-                        <div class="show-more-content">
-                            <div class="wrapper">
-                                <h3>Let's see how much you remembered ?</h3>
-
-                                <div class="question-answer-wrapper">
-                                    <div class="question-answer-box">
-                                        <div class="questions-box element-center">
-
-                                            <p class="question">1. Which of these do not deal with precise information?
-                                            </p>
-                                            <ul class="options">
-                                                <li> Engineer</li>
-                                                <li> Scientist</li>
-                                                <li> Technician</li>
-                                                <li> Fiction writer</li>
-                                            </ul>
-                                            <button class="answer-btn theme-btn">Show Answer</button>
-                                            <span style="font-size: 10px; font-weight: bold; color:#000;">hover to see
-                                                answer
-                                                and explanation</span>
-
-                                            <!-- answer-box -->
-                                            <div class="answer-box element-center">
-                                                <p> <b>Answer:</b> d </p>
-                                                <p>
-                                                    <b>Explanation:</b> A scientist, engineer, technician or
-                                                    technologist
-                                                    deals
-                                                    with precise
-                                                    information. A fiction writer may indulge in charming nonsense, but
-                                                    a
-                                                    scientific man
-                                                    must develop a style of writing which conveys information with
-                                                    precision.
-                                                </p>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="question-answer-box">
-                                        <div class="questions-box element-center">
-
-                                            <p class="question">1. Which of these do not deal with precise information?
-                                            </p>
-                                            <ul class="options">
-                                                <li> Engineer</li>
-                                                <li> Scientist</li>
-                                                <li> Technician</li>
-                                                <li> Fiction writer</li>
-                                            </ul>
-                                            <button class="answer-btn theme-btn">Show Answer</button>
-                                            <span style="font-size: 10px; font-weight: bold; color:#000;">hover to see
-                                                answer
-                                                and explanation</span>
-
-                                            <!-- answer-box -->
-                                            <div class="answer-box element-center">
-                                                <p> <b>Answer:</b> d </p>
-                                                <p>
-                                                    <b>Explanation:</b> A scientist, engineer, technician or
-                                                    technologist
-                                                    deals
-                                                    with precise
-                                                    information. A fiction writer may indulge in charming nonsense, but
-                                                    a
-                                                    scientific man
-                                                    must develop a style of writing which conveys information with
-                                                    precision.
-                                                </p>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="question-answer-box">
-                                        <div class="questions-box element-center">
-
-                                            <p class="question">1. Which of these do not deal with precise information?
-                                            </p>
-                                            <ul class="options">
-                                                <li> Engineer</li>
-                                                <li> Scientist</li>
-                                                <li> Technician</li>
-                                                <li> Fiction writer</li>
-                                            </ul>
-                                            <button class="answer-btn theme-btn">Show Answer</button>
-                                            <span style="font-size: 10px; font-weight: bold; color:#000;">hover to see
-                                                answer
-                                                and explanation</span>
-
-                                            <!-- answer-box -->
-                                            <div class="answer-box element-center">
-                                                <p> <b>Answer:</b> d </p>
-                                                <p>
-                                                    <b>Explanation:</b> A scientist, engineer, technician or
-                                                    technologist
-                                                    deals
-                                                    with precise
-                                                    information. A fiction writer may indulge in charming nonsense, but
-                                                    a
-                                                    scientific man
-                                                    must develop a style of writing which conveys information with
-                                                    precision.
-                                                </p>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="question-answer-box">
-                                        <div class="questions-box element-center">
-
-                                            <p class="question">1. Which of these do not deal with precise information?
-                                            </p>
-                                            <ul class="options">
-                                                <li> Engineer</li>
-                                                <li> Scientist</li>
-                                                <li> Technician</li>
-                                                <li> Fiction writer</li>
-                                            </ul>
-                                            <button class="answer-btn theme-btn">Show Answer</button>
-                                            <span style="font-size: 10px; font-weight: bold; color:#000;">hover to see
-                                                answer
-                                                and explanation</span>
-
-                                            <!-- answer-box -->
-                                            <div class="answer-box element-center">
-                                                <p> <b>Answer:</b> d </p>
-                                                <p>
-                                                    <b>Explanation:</b> A scientist, engineer, technician or
-                                                    technologist
-                                                    deals
-                                                    with precise
-                                                    information. A fiction writer may indulge in charming nonsense, but
-                                                    a
-                                                    scientific man
-                                                    must develop a style of writing which conveys information with
-                                                    precision.
-                                                </p>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="question-answer-box">
-                                        <div class="questions-box element-center">
-
-                                            <p class="question">1. Which of these do not deal with precise information?
-                                            </p>
-                                            <ul class="options">
-                                                <li> Engineer</li>
-                                                <li> Scientist</li>
-                                                <li> Technician</li>
-                                                <li> Fiction writer</li>
-                                            </ul>
-                                            <button class="answer-btn theme-btn">Show Answer</button>
-                                            <span style="font-size: 10px; font-weight: bold; color:#000;">hover to see
-                                                answer
-                                                and explanation</span>
-
-                                            <!-- answer-box -->
-                                            <div class="answer-box element-center">
-                                                <p> <b>Answer:</b> d </p>
-                                                <p>
-                                                    <b>Explanation:</b> A scientist, engineer, technician or
-                                                    technologist
-                                                    deals
-                                                    with precise
-                                                    information. A fiction writer may indulge in charming nonsense, but
-                                                    a
-                                                    scientific man
-                                                    must develop a style of writing which conveys information with
-                                                    precision.
-                                                </p>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="question-answer-box">
-                                        <div class="questions-box element-center">
-
-                                            <p class="question">1. Which of these do not deal with precise information?
-                                            </p>
-                                            <ul class="options">
-                                                <li> Engineer</li>
-                                                <li> Scientist</li>
-                                                <li> Technician</li>
-                                                <li> Fiction writer</li>
-                                            </ul>
-                                            <button class="answer-btn theme-btn">Show Answer</button>
-                                            <span style="font-size: 10px; font-weight: bold; color:#000;">hover to see
-                                                answer
-                                                and explanation</span>
-
-                                            <!-- answer-box -->
-                                            <div class="answer-box element-center">
-                                                <p> <b>Answer:</b> d </p>
-                                                <p>
-                                                    <b>Explanation:</b> A scientist, engineer, technician or
-                                                    technologist
-                                                    deals
-                                                    with precise
-                                                    information. A fiction writer may indulge in charming nonsense, but
-                                                    a
-                                                    scientific man
-                                                    must develop a style of writing which conveys information with
-                                                    precision.
-                                                </p>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="show-more-box">
-                        <button class="show-more-btn" onclick="revealSection(this)">
-                            <span class="show-more-head">Listen Audios 🔊<span class="sub-head">(Lorem Lorem ipsum dolor
-                                    sit
-                                    amet consectetur adipisicing )</span> </span>
-                            <span class="down-arrow">⏷</span>
-                        </button>
-
-                        <div class="show-more-content">
-                            <div class="wrapper">
-                                <h3>Listen to audios to improve your communication skills</h3>
-                                <div class="audio-box">
-                                    <audio class="audio" controls preload="auto" src="./assets/audio.m4a"></audio>
-
-                                    <audio class="audio" controls preload="auto" src="./assets/audio.m4a"></audio>
-
-                                    <audio class="audio" controls preload="auto" src="./assets/audio.m4a"></audio>
-
-                                    <audio class="audio" controls preload="auto" src="./assets/audio.m4a"></audio>
-
-                                    <audio class="audio" controls preload="auto" src="./assets/audio.m4a"></audio>
-
-                                    <audio class="audio" controls preload="auto" src="./assets/audio.m4a"></audio>
-                                    <audio class="audio" controls preload="auto" src="./assets/audio.m4a"></audio>
-                                    <audio class="audio" controls preload="auto" src="./assets/audio.m4a"></audio>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="show-more-box">
-                        <button class="show-more-btn" onclick="revealSection(this)">
-                            <span class="show-more-head">Let'ssummarise 🎯 <span class="sub-head">(Lorem Lorem ipsum
-                                    dolor sit
-                                    amet consectetur adipisicing )</span> </span>
-                            <span class="down-arrow">⏷</span>
-                        </button>
-
-                        <div class="show-more-content">
-                            <div class="wrapper">
-                                <h3>Heading 1</h3>
-                                <ul>
-                                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus quod ullam in
-                                        nemo officiis quam facilis repudiandae, fugit fuga quo.</li>
-                                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus quod ullam in
-                                        nemo officiis quam facilis repudiandae, fugit fuga quo.</li>
-                                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus quod ullam in
-                                        nemo officiis quam facilis repudiandae, fugit fuga quo.</li>
-                                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus quod ullam in
-                                        nemo officiis quam facilis repudiandae, fugit fuga quo.</li>
-                                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus quod ullam in
-                                        nemo officiis quam facilis repudiandae, fugit fuga quo.</li>
-                                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus quod ullam in
-                                        nemo officiis quam facilis repudiandae, fugit fuga quo.</li>
-                                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus quod ullam in
-                                        nemo officiis quam facilis repudiandae, fugit fuga quo.</li>
-                                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus quod ullam in
-                                        nemo officiis quam facilis repudiandae, fugit fuga quo.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <audio
+                      class="audio"
+                      controls
+                      preload="auto"
+                      src="./assets/audio.m4a"
+                    ></audio>
+                    <audio
+                      class="audio"
+                      controls
+                      preload="auto"
+                      src="./assets/audio.m4a"
+                    ></audio>
+                    <audio
+                      class="audio"
+                      controls
+                      preload="auto"
+                      src="./assets/audio.m4a"
+                    ></audio>
+                     <audio
+                      class="audio"
+                      controls
+                      preload="auto"
+                      src="./assets/audio.m4a"
+                    ></audio>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
+            <div class="show-more-box">
+              <button class="show-more-btn" onclick="revealSection(this)">
+                <span class="show-more-head"
+                  >Let'ssummarise  <i class="fa-solid fa-list" style="color: #ffffff;"></i>
+                  <span class="sub-head"
+                    >(Lorem Lorem ipsum dolor sit amet consectetur adipisicing
+                    )</span
+                  >
+                </span>
+                <span class="down-arrow"><i class="fa-solid fa-chevron-down" style="color: #000000;"></i></span>
+              </button>
 
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="./script.js"></script>
-</body>
+              <div class="show-more-content">
+                <div class="wrapper">
+                  <h3>Heading 1</h3>
+                  <ul>
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Possimus quod ullam in nemo officiis quam facilis
+                      repudiandae, fugit fuga quo.
+                    </li>
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Possimus quod ullam in nemo officiis quam facilis
+                      repudiandae, fugit fuga quo.
+                    </li>
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Possimus quod ullam in nemo officiis quam facilis
+                      repudiandae, fugit fuga quo.
+                    </li>
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Possimus quod ullam in nemo officiis quam facilis
+                      repudiandae, fugit fuga quo.
+                    </li>
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Possimus quod ullam in nemo officiis quam facilis
+                      repudiandae, fugit fuga quo.
+                    </li>
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Possimus quod ullam in nemo officiis quam facilis
+                      repudiandae, fugit fuga quo.
+                    </li>
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Possimus quod ullam in nemo officiis quam facilis
+                      repudiandae, fugit fuga quo.
+                    </li>
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Possimus quod ullam in nemo officiis quam facilis
+                      repudiandae, fugit fuga quo.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
 </html>
