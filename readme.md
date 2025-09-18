@@ -13,9 +13,10 @@
 
 👉 [Live Preview](https://khalid-raza03.github.io/task-submission-khalid/)
 
-## Screenshots
 
-![Project Demo](./assets/sample.mp4)
+## Sample video
+[📹 Watch Demo Video](./assets/sample.mp4)
+
 
 ## Technologies
 
