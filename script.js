@@ -121,8 +121,11 @@ window.addEventListener("scroll", function scrollProgress() {
 
 const navIcon = document.getElementById("navigateIcon")
 const navBar = document.getElementById("navigate")
+const magnifyingGlass = navigateIcon.querySelector('.fa-magnifying-glass');
+const xmark = navigateIcon.querySelector('.fa-xmark');
 
 navIcon.addEventListener("click",()=>{
   navIcon.classList.toggle("expand");
   navBar.classList.toggle("active");
+   navIcon.classList.toggle('active');
 })

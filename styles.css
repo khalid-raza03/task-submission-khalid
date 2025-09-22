@@ -189,6 +189,18 @@ body {
   gap: 20px;
 }
 
+.navigate-icon .fa-xmark {
+    display: none;
+}
+
+.navigate-icon.active .fa-magnifying-glass {
+    display: none;
+}
+
+.navigate-icon.active .fa-xmark {
+    display: inline !important;
+}
+
 .navigate .sections-link {
   display: flex;
   align-items: center;
@@ -552,7 +564,7 @@ body {
 .detailed-concepts .show-more-btn .down-arrow {
   float: right;
   background-color: #ffffff;
-  padding: 8px 10px;
+  padding: 9px 10px;
   border-radius: 50%;
   transition: transform 0.3s ease-in-out;
 }
@@ -791,7 +803,7 @@ body {
     border-radius: 50%;
     transition: all 0.4s ease-in-out;
     width: 100%;
-    max-width: 60px;
+    max-width: 62px;
   }
   .navigate-icon.expand {
     border-radius: 20px;
@@ -810,7 +822,7 @@ body {
     overflow: hidden;
     white-space: nowrap;
     font-weight: lighter;
-    width: 200px;
+    width: 175px;
     display: inline-block;
     font-size: smaller;
     padding-left: 5px;
