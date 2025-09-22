@@ -761,7 +761,7 @@ body {
     background-color: #0000004d;
     padding: 2%;
     border-radius: 20px;
-    bottom: 8%;
+    bottom: 7%;
     width: 100%;
     max-width: 300px;
     left: 50%;
@@ -830,4 +830,14 @@ body {
   .slider-section .pause-btn-layer {
     right: 7%;
   }
+
+   .navigate{
+    bottom: 8%;
+   }
+}
+
+@media (max-width:359px) {
+     .navigate{
+    bottom: 14%;
+   }
 }
