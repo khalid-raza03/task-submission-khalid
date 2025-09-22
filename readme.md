@@ -1,6 +1,6 @@
 # Project Name
 
-**Task submission** , a responsive Educational website components createdusing **HTML, css, and vanilla js**.
+**Task submission** , a responsive Educational website components created using **HTML, css, and vanilla js**.
 
 ## Features
 

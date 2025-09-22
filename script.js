@@ -65,7 +65,6 @@ function openPopup(slideId) {
   const popHead = document.getElementById("popupHead");
   const popPara = document.getElementById("popupPara");
   const popList = document.getElementById("popupList");
-  const Cover = document.getElementById("popupCover");
   popHead.innerHTML = data.head;
   popPara.innerHTML = data.para;
   popList.innerHTML = data.list;
@@ -116,3 +115,14 @@ window.addEventListener("scroll", function scrollProgress() {
   var scrolled = (winScroll / scrolledLength) * 100;
   document.getElementById("progressBar").style.width = scrolled + "%";
 });
+
+
+//navigation bar
+
+const navIcon = document.getElementById("navigateIcon")
+const navBar = document.getElementById("navigate")
+
+navIcon.addEventListener("click",()=>{
+  navIcon.classList.toggle("expand");
+  navBar.classList.toggle("active");
+})
